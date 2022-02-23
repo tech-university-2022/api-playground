@@ -1,41 +1,19 @@
 const http = require("http");
+const url = require('url');
 const host = "localhost";
 const port = 3000;
-
+const airportData = require('./airportDetails');
+ 
 const requestHandler = (req, res) => {
-  res.end("Hello");
+    res.setHeader("Content-Type", "application/json");
+    res.writeHead(200);
+    const queryObject = url.parse(req.url, true).query;
+    console.log(queryObject.airportcode);
+    console.log(typeof(queryObject.airportcode));
+    const airportDetail = airportData.airportInfo(queryObject.airportcode);
+    console.log(airportDetail);
+    res.end('Airport Details');
 };
-
-/*
-const requestHandler = (req, res) => {
-  res.setHeader("Content-Type", "application/json");
-  res.writeHead(200);
-  res.end(`{"message": "This is a JSON response"}`);
-};
-
-
-const requestHandler = (req, res) => {
-  res.setHeader("Content-Type", "application/json");
-  switch (req.url) {
-    case "/":
-      res.writeHead(200);
-      res.end("Its working!");
-      break;
-    case "/ping":
-      res.writeHead(200);
-      res.end("Pong");
-      break;
-    case "/hello-json":
-      res.writeHead(200);
-      res.end(
-        JSON.stringify({
-          message: "Hello this is json response",
-        })
-      );
-      break;
-  }
-};
-*/
 
 const server = http.createServer(requestHandler);
 
