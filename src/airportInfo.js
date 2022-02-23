@@ -7,9 +7,10 @@ const getInfo = (airportCode) => {
   airportsData.forEach((airport) => {
     if (airport.code === airportCode) {
       airportExists = 1;
-      airportDetails.country = airport.country;
+      airportDetails.airport_name = airport.name;
+      airportDetails.airport_code = airport.code;
       airportDetails.city = airport.city;
-      airportDetails.name = airport.name;
+      airportDetails.country = airport.country;
     }
   });
   if (airportExists) { return airportDetails; }
