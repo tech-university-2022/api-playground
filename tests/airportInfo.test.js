@@ -4,9 +4,10 @@ describe('getInfo function', () => {
   it('should give the object containing airport country,city and name', () => {
     const airport = getInfo('ZXE');
     const airportData = {
-      country: 'United Kingdom',
+      airport_name: 'Waverley station',
+      airport_code: 'ZXE',
       city: 'Edinburgh',
-      name: 'Waverley station',
+      country: 'United Kingdom',
     };
     expect(airport).toStrictEqual(airportData);
   });
