@@ -8,20 +8,21 @@ const getAirportInformation = (code) => {
     if (airport.code === code) {
       foundFlag = 1;
       airportInformation = {
-        Name: airport.name,
-        City: airport.city,
-        Contry: airport.city,
+        airport_name: airport.name,
+        airport_code: code,
+        city: airport.city,
+        country: airport.city,
       };
     }
   });
   if (foundFlag === 0) return 'Cannot find an airport with that code!';
   return airportInformation;
 };
-try {
-  console.log(getAirportInformation('MAS'));
-} catch (err) {
-  console.log(err.message);
-}
+// try {
+//   console.log(getAirportInformation('MAS'));
+// } catch (err) {
+//   console.log(err.message);
+// }
 module.exports = {
   getAirportInformation,
 };
