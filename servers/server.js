@@ -15,8 +15,8 @@ const server = http.createServer((req, res) => {
       res.writeHead(200);
       res.end(JSON.stringify(airportDetails, null, '\t'));
     } catch (err) {
-      res.writeHead(400);
       res.setHeader('Content-Type', 'text/plain');
+      res.writeHead(400);
       res.end(err.message);
     }
   }
