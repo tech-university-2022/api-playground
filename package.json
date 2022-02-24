@@ -1,0 +1,24 @@
+{
+  "name": "airport-module",
+  "version": "1.0.0",
+  "description": "Returns the <i>airport name, city and country</i?> when <b>Airpot code</b> is given",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AishMckinsey/Airport-Module.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AishMckinsey/Airport-Module/issues"
+  },
+  "homepage": "https://github.com/AishMckinsey/Airport-Module#readme",
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-plugin-react": "^7.28.0",
+    "jest": "^27.5.1"
+  }
+}
