@@ -1,12 +1,17 @@
 const http = require('http');
 const url =require('url');
 const {airportInformation} = require('./airportDetailsProvider.js');
-//create a server object:
-http.createServer((request, response) => {
+const host = 'localhost';
+const port = 3000;
+const server = http.createServer((request, response) => {
     response.writeHead(200, {'Content-Type': 'text/html'});
     const queryParameter = url.parse(request.url, true).query;
-    let code = queryParameter.airportCode;
+    let code = queryParameter['airport-code'];
     let airportObj = airportInformation(code);
     //const aiprortCodeReq = queryParameter.airport-code ;
     response.end(JSON.stringify(airportObj));
-}).listen(3000);
+});
+
+server.listen(port, host, () => {
+    console.log(`Server started. Visit http://${host}:${port}/airport-details?airport-code=DEL`);
+  });
