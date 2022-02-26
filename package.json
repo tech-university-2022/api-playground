@@ -1,0 +1,23 @@
+{
+  "name": "airport-node-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palakag123/Airport-Module.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/palakag123/Airport-Module/issues"
+  },
+  "homepage": "https://github.com/palakag123/Airport-Module#readme",
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "jest": "^27.5.1"
+  }
+}
