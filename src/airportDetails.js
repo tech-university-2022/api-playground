@@ -9,6 +9,7 @@ const getAirportInfo = (airportCode) => {
       foundFlag = 1;
       airportInformation = {
         Name: airport.name,
+        Code: airport.code,
         City: airport.city,
         Country: airport.country,
       };
