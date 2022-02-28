@@ -1,6 +1,6 @@
 const http = require('http');
 const url = require('url');
-const airports = require('./airportDetails');
+const airports = require('./src/airportDetails');
 
 const host = 'localhost';
 const port = 3000;
